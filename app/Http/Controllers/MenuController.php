@@ -15,7 +15,7 @@ class MenuController extends Controller
         $menus = Menu::all();
         return response([
             'status' => 'success',
-            'message' => 'Data Menu Berhasil Ditambahkan!',
+            'message' => 'Data Menu Berhasil Didapat!',
             'menu' => $menus,
          ]);
     }
