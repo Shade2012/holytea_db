@@ -12,7 +12,7 @@ use App\Http\Controllers\UserController;
 Route::group(['prefix' => '/users'], function () {
     Route::post('/register', [UserController::class, 'register']);
     Route::post('/login', [UserController::class, 'login']);
-    Route::post('/all-users', [UserController::class, 'allUsers']);
+    Route::get('/all-users', [UserController::class, 'allUsers']);
     Route::get('/details', [UserController::class, 'details'])->middleware('auth:sanctum');
 });
 
