@@ -105,4 +105,13 @@ class UserController extends Controller
         ], 200);
     }
 
+    public function allUsers()
+    {
+        $user = User::all();
+        return response()->json([
+            'success' => true,
+            'message' => 'User details',
+            'user' => $user,
+        ], 200);
+    }
 }
